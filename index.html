@@ -45,86 +45,56 @@
 			</div>
 
   	</main>
+		<div class="cloud-container">
+			<div class="projects">
+				<h3 id="accomplishments">Accomplishments</h3>
+				<ul>
+					<li data-tech="['SolidWorks Composer', 'Illustrator', 'SVG', 'Ruby', 'Javascript']">Created and built <a href="https://www.sonnax.com/units/115-1000-2000-2400-2006-later-multi-plate-performance-converter" alt="Just one of ~200">interactive part finder diagrams</a> using a mix technologies including SolidWorks Composer, SVG, Ruby and Javascript<br>
+						<span class="tech"><span class="de">SolidWorks Composer</span>, <span class="de">Illustrator</span>, <span class="fe">SVG</span>, <span class="be">Ruby</span>, <span class="fe">Javascript</span>, <span class="fe">Stimulus</span></span></li>
+					<li data-tech="['Postgres', 'XML', 'Javascript', 'Ruby', 'InDesign', 'Photoshop']">Sped up print catalog production by building XML files tied to the website database that can be directly imported into <a href="https://www.sonnax.com/valve_body_layouts">intricate layouts</a> in Adobe InDesign. I also created custom InDesign scripts for final visual tweaks.<br>
+						<span class="tech"><span class="be">Ruby</span>, <span class="be">Postgres</span>, <span class="be">XML</span>, <span class="fe">Javascript</span>, <span class="de">InDesign</span>, <span class="de">Photoshop</span></span></li>
+					<li data-tech="['Ruby', 'Postgres', 'Javascript', 'Stimulus', 'Elasticsearch', 'Rspec', 'Git, 'Usability', 'Project Management', 'HTML', 'CSS', 'SASS', 'SQL']">Designed and built an industry-lauded website that raised traffic by more than 50% and engagement by more than 25% over my tenure. Developed in Ruby on Rails with a Postgres database using test driven development. It includes a custom CMS and adminisrative section.<br>
+						<span class="tech"><span class="be">Ruby</span>, <span class="be">Postgres</span>, <span class="fe">Javascript</span>, <span class="fe">Stimulus</span>, <span class="be">Elasticsearch</span>, <span class="be">RSpec</span>, <span class="be">Git</span>, <span class="o">Usability</span>, <span class="o">Project Management</span>, <span class="fe">HTML</span>, <span class="fe">CSS</span>, <span class="fe">SASS</span>, <span class="be">SQL</span></span></li>
+					<li data-tech="['Javascript', 'Stimulus', 'Usability', 'HTML', 'CSS', 'SASS']">Implemented a custom responsive front-end design using SASS - no boilerplate framework.<br>
+						<span class="tech"><span class="fe">CSS</span>, <span class="fe">SASS</span>, <span class="fe">Stimulus</span>, <span class="fe">HTML</span>, <span class="o">Usability</span></span></li>
+					<li data-tech="['Ruby', 'Postgres', 'Project Management', 'Usability']">Designed and refined the new part development data collection and review system used to capture product information accurately and easily by internal users.<br>
+						<span class="tech"><span class="be">Ruby</span>, <span class="be">Postgres</span>, <span class="o">Project Management</span>, <span class="o">Usability</span></span></li>
+					<li data-tech="['Ruby', 'Javascript', 'React', 'Git', 'Project Management']">Developed a custom project management app for prioritizing and keeping track of upcoming projects. It is a Ruby on Rails API powered React app.<br>
+						<span class="tech"><span class="be">Ruby</span>, <span class="fe">Javascript</span>, <span class="fe">React</span>, <span class="be">Git</span>, <span class="o">Project Management</span></span></li>
+					<li data-tech="['SQL', 'Postgres']">Maintained product and tech resource database, including pulling and building custom reports based on user requests.<br>
+						<span class="tech"><span class="be">Postgres</span>, <span class="be">SQL</span></span></li>
+					<li data-tech="['Ruby', 'Javascript', 'Stimulus', 'RSpec', 'Git', 'SEO']">Continually improved the Sonnax website experience through feature requests, bug fixes as well as day-to-day maintenance.<br>
+						<span class="tech"><span class="be">Ruby</span>, <span class="fe">Javascript</span>, <span class="fe">Stimulus</span>, <span class="be">RSpec</span>, <span class="be">Git</span>, <span class="o">SEO</span></span></li>
+				</ul>
+			</div>
+
+  	  	<div class="cloud">
+  				<span class="be" onclick="highlightProjects(event,'Ruby')">Ruby</span>
+  				<span class="be" onclick="highlightProjects(event,'Git')">Git</span>
+  				<span class="be" onclick="highlightProjects(event,'Postgres')">Postgres</span>
+  				<span class="be" onclick="highlightProjects(event,'XML')">XML</span>
+  				<span class="be" onclick="highlightProjects(event,'RSpec')">RSpec</span>
+  				<span class="be" onclick="highlightProjects(event,'Elasticsearch')">Elasticsearch</span>
+  				<span class="be" onclick="highlightProjects(event,'SQL')">SQL</span>
+  				<span class="fe" onclick="highlightProjects(event,'HTML')">HTML</span>
+					<span class="fe" onclick="highlightProjects(event,'CSS')">CSS</span>
+					<span class="fe" onclick="highlightProjects(event,'Javascript')">Javascript</span>
+					<span class="fe" onclick="highlightProjects(event,'SASS')">SASS</span>
+					<span class="fe" onclick="highlightProjects(event,'Stimulus')">Stimulus</span>
+					<span class="fe" onclick="highlightProjects(event,'SVG')">SVG</span>
+  				<span class="de" onclick="highlightProjects(event,'InDesign')">InDesign</span>
+  				<span class="de" onclick="highlightProjects(event,'Photoshop')">Photoshop</span>
+  				<span class="de" onclick="highlightProjects(event,'Illustrator')">Illustrator</span>
+  				<span class="de" onclick="highlightProjects(event,'SolidWorks Composer')">SolidWorks Composer</span>
+  				<span class="o" onclick="highlightProjects(event,'SEO')">SEO</span>
+  				<span class="o" onclick="highlightProjects(event,'Project Management')">Project Management</span>
+  				<span class="o" onclick="highlightProjects(event,'Usability')">Usability</span>
+  			</div>
+  	</div>
   	<footer>
   		<h4><a href="mailto:kristin@kristinmerbach.com" class="emaillink">Be In Touch</a></h4>
   		<p><i><small>©2020 Kristin O. Merbach</small></i></p>
-  		  	<script>
-  			function highlightProjects(event, p) {
-  				const et = event.target;
-  				let ho = et.classList.contains('highlighted');
-  				et.classList.toggle('highlighted');
-  				
-  				const highlights = document.querySelectorAll('.cloud span');
-  				const techs = document.querySelectorAll('.projects li');
-  				
-  				for (var i = 0; i < highlights.length; i++) {
-  					if (highlights[i] !== et) {
-  						highlights[i].classList.remove('highlighted');
-  					}
-					}
-					
-					let highlighted = [];
-  				for (var i = 0; i < techs.length; i++) {
-  					if (techs[i].dataset.tech && techs[i].dataset.tech.includes(p) && ho == false) {
-  						highlighted.push(techs[i])
-  						techs[i].classList.add('highlighted');
-  					} else {
-  						techs[i].classList.remove('highlighted')
-  					}
-					}
-					if (highlighted[0]) {
-						highlighted[0].scrollIntoView();
-					}
-					
-  			}
-
-  			//moving eyes
-  			const leyeball = document.querySelector('#leyeball');
-  			const leyeballBB = leyeball.getBBox();
-  			const lew = leyeballBB.width;
-  			
-  			const leye = document.querySelector('#lpupil');
-  			const leyeBB = leye.getBBox();
-  			const lpw = leyeBB.width;
-  			
-  			const leML = leyeballBB.x + (lpw/2);
-  			const leMR = (leyeballBB.x + leyeballBB.width) - (lpw/4);
-
-
-  			const reyeball = document.querySelector('#reyeball');
-  			const reyeballBB = reyeball.getBBox();
-  			const rew = reyeballBB.width;
-  			const reye = document.querySelector('#rpupil');
-  			const reyeBB = reye.getBBox();
-  			const rpw = reyeBB.width;
-  			const reML = reyeballBB.x + (rpw/2);
-  			const reMR = (reyeballBB.x + reyeballBB.width) - (rpw/4);
-  			
-        document.addEventListener("mousemove", (e)=> {
-        	let hP = e.clientX / window.innerWidth;
-        	
-        	let lhM = (lew*hP)+leML;
-        	let rhM = (rew*hP)+reML;      	
-        	
-        	if ((lhM) < leML) {
-        		leye.style.cx = `${leML}`;
-        	} else if (lhM > leMR) {
-        		leye.style.cx = `${leMR}`;
-        	} else {
-        		leye.style.cx = `${lhM}`;
-        	}
-
-        	if ((rhM) < reML) {
-        		reye.style.cx = `${reML}`;
-        	} else if (rhM > reMR) {
-        		reye.style.cx = `${reMR}`;
-        	} else {
-        		reye.style.cx = `${rhM}`;
-        	}
-        });
-
-
-  	</script>
   	</footer>
+  	<script src="script.js"></script>
   </body>
 </html>
