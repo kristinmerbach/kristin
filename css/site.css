@@ -1,232 +1,228 @@
-	* {
-		-webkit-box-sizing: border-box;
-	  -moz-box-sizing: border-box;
-	  box-sizing: border-box;
-	  overflow-x: hidden !important;
-	}
+* {
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-	html {
-		overflow-x: hidden !important;
-	}
+html {
+	overflow-x: hidden !important;
+}
 
-	body {
-		background-color:#FFF9EB;
-		font-family: 'Raleway', sans-serif;
-		overflow-x: hidden !important;
-	}
+body {
+	background-color:#FFF9EB;
+	font-family: 'Raleway', sans-serif;
+	overflow-x: hidden !important;
+}
 
-	header {
-		width: 100%;
-		padding: 1em 3em 6vw 3em;
-		margin: 0;
-		background-color: #FBE6D8;
-		background-size: 20px 20px;
-		background-image: repeating-linear-gradient(45deg, #FBE6D8 0, #FBE6D8 2px, #FFF9EB 0, #FFF9EB 50%);
-    z-index: 1;
-    overflow: hidden;
-	  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
-	          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
-	}
+header {
+	width: 100%;
+	padding: 1em 3em 6vw 3em;
+	margin: 0;
+	background-color: #FBE6D8;
+	background-size: 20px 20px;
+	background-image: repeating-linear-gradient(45deg, #FBE6D8 0, #FBE6D8 2px, #FFF9EB 0, #FFF9EB 50%);
+  z-index: 1;
+  overflow: hidden;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
+}
 
+h1 {
+	font-family: 'Great Vibes', cursive;
+	font-size: 4em;
+	margin: .25em 0 0 0;
+	color: #bc3641;
+}
+h1+p {
+	font-size: 2em; 
+	margin-top: 0
+}
+.cursive {font-family: 'Great Vibes', cursive;}
+
+main {
+	padding: 1em 3em 6vw 3em;
+	width: 100%;
+	margin: 0;
+	margin-top: -6vw;
+	position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(2,74,201,1) 33%, rgba(188,54,65,1) 66%);
+   -webkit-clip-path: polygon(0 0, 100% calc(0% + 6vw), 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% calc(0% + 6vw), 100% 100%, 0 100%);
+}
+
+h2 {
+	font-family: 'Great Vibes', cursive;
+	font-size: 2em;
+	color: #FFF9EB;
+	margin: 0;
+}
+h3 {
+	font-family: 'Great Vibes', cursive;
+	font-size: 2em;
+	color: #000;
+	margin: 0;
+}
+blockquote {
+	font-size: 2.5em;
+	font-weight: bold
+}
+#portrait {
+	width: 100%;
+	text-align: center;
+}
+#portrait svg {
+	width: 100%;
+	border: 4px solid #f8cdb1;
+}
+footer {
+	text-align: center;
+	width: 100%;
+	margin: 0;
+	padding: 1em 3em;
+	position: relative;
+	padding: 1em 3em;
+	background-image: repeating-linear-gradient(to right, #FFF9EB, #FFF9EB 10px, #FBE6D8 10px, #FBE6D8);
+	background-size: 20px 100%;
+}
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+a {color: #004F32;}
+
+.aoi {
+	margin-top: 6vw;
+	margin-bottom: 0;
+	display: flex; 
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aoi div {
+	width: 100%;
+	color: white;
+}
+.aoi div.x2 {
+	width: 100%;
+	margin-top: 2em;
+	font-size: 1.25em;
+}
+
+
+div.cloud-container {
+	margin: 0;
+	background-color:#FFF9EB;
+	width: 100%;
+	padding: 1em 3em;
+	/* background-image: radial-gradient(#FBE6D8 2px, #FFF9EB 2px);
+	background-size: 10px 10px; */
+	display: flex; 
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+div.projects {
+	width: 100%;
+}
+
+.projects ul {
+	list-style: none;
+	list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.projects li {
+	display: block;
+	width: 100%;
+	margin-left: 0;
+	margin-bottom: 1em;
+	font-size: 1.5em;
+	border-left: 5px solid #fff;
+}
+
+div.projects .tech {
+	font-weight: bold;
+	font-size: .5em;
+	text-transform: uppercase;
+}
+
+div.cloud {
+	width: 100%;
+  text-align: center;
+}
+
+.cloud span {
+	font-size: 1.25em;
+  display: block;
+  margin-bottom: .5em;
+}
+.fe {
+	color: #5F4085;
+}
+.de {
+	color: #BC3641;
+}
+.o {
+	color: #004F32;
+}
+.be {
+	color: #024AC9;
+}
+.emaillink {
+	padding: .5em 2em;
+	background: #5F4085;
+	background: linear-gradient(180deg, rgba(2,74,201,1) 0%, rgb(95, 64, 133, 1) 100%);
+	color: white;
+	margin-top: .25em;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 2em;
+	box-shadow: 5px 10px #BC3641;
+}
+.emaillink:hover {
+	background: linear-gradient(180deg, rgba(188,54,65,1) 0%, rgb(95, 64, 133, 1) 100%);
+	box-shadow: 5px 10px #024AC9;
+}
+.highlighted {
+	background: white;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 850px) {
 	h1 {
-		font-family: 'Great Vibes', cursive;
-		font-size: 4em;
-		margin: .25em 0 0 0;
-		color: #bc3641;
-	}
-	h1+p {
-		font-size: 2em; 
-		margin-top: 0
-	}
-	.cursive {font-family: 'Great Vibes', cursive;}
-	
-	main {
-		padding: 1em 3em 6vw 3em;
-		width: 100%;
-		margin: 0;
-		margin-top: -6vw;
-		position: relative;
-    z-index: 1;
-    overflow: hidden;
-    background: linear-gradient(90deg, rgba(2,74,201,1) 33%, rgba(188,54,65,1) 66%);
-	   -webkit-clip-path: polygon(0 0, 100% calc(0% + 6vw), 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% calc(0% + 6vw), 100% 100%, 0 100%);
-	}
-
-	h2 {
-		font-family: 'Great Vibes', cursive;
-		font-size: 2em;
-		color: #FFF9EB;
-		margin: 0;
-	}
-	h3 {
-		font-family: 'Great Vibes', cursive;
-		font-size: 2em;
-		color: #000;
-		margin: 0;
-	}
-	blockquote {
-		font-size: 2.5em;
-		font-weight: bold
+		font-size: 8em;
 	}
 	#portrait {
-		width: 100%;
-		text-align: center;
+		width: 15em;
+		float: right;
+		margin-left: 1em;
 	}
-	#portrait svg {
-		width: 100%;
-		border: 4px solid #f8cdb1;
-	}
-	footer {
-		text-align: center;
-		width: 100%;
-		margin: 0;
-		padding: 1em 3em;
-		position: relative;
-		padding: 1em 3em;
-		background-image: repeating-linear-gradient(to right, #FFF9EB, #FFF9EB 10px, #FBE6D8 10px, #FBE6D8);
-		background-size: 20px 100%;
-	}
-
-
-	.clearfix::after {
-	  content: "";
-	  clear: both;
-	  display: table;
-	}
-
-	a {color: #004F32;}
-
-	.aoi {
-		margin-top: 6vw;
-		margin-bottom: 0;
-		display: flex; 
-    flex-flow: row wrap;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-	}
-
 	.aoi div {
-		width: 100%;
-		color: white;
+		width: 33%;
+		float: left;
+		display: inline-block;
 	}
 	.aoi div.x2 {
-		width: 100%;
-		margin-top: 2em;
-		font-size: 1.25em;
-	}
-
-	
-	div.cloud-container {
-		margin: 0;
-		background-color:#FFF9EB;
-		width: 100%;
-		padding: 1em 3em;
-		/* background-image: radial-gradient(#FBE6D8 2px, #FFF9EB 2px);
-		background-size: 10px 10px; */
-		display: flex; 
-    flex-flow: row wrap;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+		width: 64%;
+		margin-left: 2%;
 	}
 	div.projects {
-		width: 100%;
-	}
-
-	.projects ul {
-		list-style: none;
-		list-style-type: none;
-	  margin-left: 0;
-	  padding-left: 0;
-	}
-	.projects li {
-		display: block;
-		width: 100%;
-		margin-left: 0;
-		margin-bottom: 1em;
-		font-size: 1.5em;
-		border-left: 5px solid;
-		padding-left: 5px;
-		border-right: none;
-    border-image:
-    linear-gradient(
-      to bottom, 
-      rgba(2,74,201,1), 
-      rgba(188,54,65,1)
-    ) 1 100%;
-	}
-	div.projects .tech {
-		font-weight: bold;
-		font-size: .5em;
-		text-transform: uppercase;
-	}
-
-	div.cloud {
-		width: 100%;
-	  text-align: center;
-	}
-	
-	.cloud span {
-		font-size: 1.25em;
-	  display: block;
-	  margin-bottom: .5em;
-	}
-	.fe {
-		color: #5F4085;
-	}
-	.de {
-		color: #BC3641;
-	}
-	.o {
-		color: #004F32;
-	}
-	.be {
-		color: #024AC9;
-	}
-	.emaillink {
-		padding: .5em 2em;
-		background: #5F4085;
-		background: linear-gradient(180deg, rgba(2,74,201,1) 0%, rgb(95, 64, 133, 1) 100%);
-		color: white;
-		margin-top: .25em;
+		width: 79%;
+		margin-right: 1%;
 		display: inline-block;
-		font-weight: bold;
-		font-size: 2em;
-		box-shadow: 5px 10px #BC3641;
-	}
-	.emaillink:hover {
-		background: linear-gradient(180deg, rgba(188,54,65,1) 0%, rgb(95, 64, 133, 1) 100%);
-		box-shadow: 5px 10px #024AC9;
-	}
-	.highlighted {background: white; font-weight: bold;}
-	@media screen and (min-width: 850px) {
-		h1 {
-			font-size: 8em;
-		}
-		#portrait {
-			width: 15em;
-			float: right;
-			margin-left: 1em;
-		}
-		.aoi div {
-			width: 33%;
-			float: left;
-			display: inline-block;
-		}
-		.aoi div.x2 {
-			width: 64%;
-			margin-left: 2%;
-		}
-		div.projects {
-			width: 79%;
-			margin-right: 1%;
-			display: inline-block;
 
-		}
-		div.cloud {
-			display: inline-block;
-			width: 20%;
-		}
 	}
+	div.cloud {
+		display: inline-block;
+		width: 20%;
+	}
+}
