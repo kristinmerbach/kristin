@@ -6,6 +6,7 @@
 		-webkit-box-sizing: border-box;
 	  -moz-box-sizing: border-box;
 	  box-sizing: border-box;
+	  border: 1px solid red;
 	}
 
 	header {
@@ -13,12 +14,7 @@
 		padding: 1em 3em 6vw 3em;
 		margin: 0;
 		background-color: #FBE6D8;
-		background-size: 20px 20px;
-		background-image: repeating-linear-gradient(45deg, #FBE6D8 0, #FBE6D8 2px, #FFF9EB 0, #FFF9EB 50%);
-    z-index: 1;
-    overflow: hidden;
-	  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
-	          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
+
 	}
 	h1 {
 		font-family: 'Great Vibes', cursive;
