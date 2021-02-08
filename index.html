@@ -27,25 +27,13 @@
 	header {
 		padding: 1em 3em 6vw 3em;
 		margin: 0;
-		position: relative;
+		background-color: #FBE6D8;
+		background-size: 20px 20px;
+		background-image: repeating-linear-gradient(45deg, #FBE6D8 0, #FBE6D8 2px, #FFF9EB 0, #FFF9EB 50%);
     z-index: 1;
     overflow: hidden;
 	  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
 	          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 6vw));
-	}
-	.hcontent {
-		background-color: #f8cdb1;
-		opacity: 0.5;
-		background-size: 20px 20px;
-		background-image: repeating-linear-gradient(45deg, #fff3d7 0, #fff3d7 2px, #f8cdb1 0, #f8cdb1 50%);
-		position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
 	}
 	h1 {
 		font-family: 'Great Vibes', cursive;
@@ -100,14 +88,10 @@
 		padding: 1em 3em;
 		position: relative;
 		padding: 1em 3em;
+		background-image: repeating-linear-gradient(to right, #FFF9EB, #FFF9EB 10px, #FBE6D8 10px, #FBE6D8);
+		background-size: 20px 100%;
 	}
 
-	
-
-	footer .hcontent {
-	  background-image: linear-gradient(to right, #fff3d7, #fff3d7 10px, #f8cdb1 10px, #f8cdb1);
-	  background-size: 20px 100%;
-	}
 
 	.clearfix::after {
 	  content: "";
@@ -392,7 +376,6 @@
 
   		</script>
   	<footer>
-  		<div class="hcontent"></div>
   		<h4><a href="mailto:kristin@kristinmerbach.com" class="emaillink">Be In Touch</a></h4>
   		<p><i><small>©2020 Kristin O. Merbach</small></i></p>
   	</footer>
