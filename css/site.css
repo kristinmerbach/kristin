@@ -192,20 +192,56 @@ div.cloud {
 .be {
 	color: #024AC9;
 }
+#my-form {
+	width: 100%;
+	margin: 0 auto;
+	text-align: left
+}
+#my-form input, #my-form textarea {
+	display: block;
+	width: 100%;
+}
+#my-form label {
+	font-weight: bold;
+	color: white;
+}
+.input_container {
+	background: #BC3641;
+	padding: .5em;
+	margin-bottom: 1em;
+}
+.input_container.short {
+	width: 100%;
+	display: inline-block;
+	float: left;
+}
+#my-form-status {
+	font-size: 2em;
+	font-weight: bold;
+	width: 100%;
+	background: #BC3641;
+	padding: .25em;
+	margin: 0 auto;
+	color: white;
+}
+#my-form-status p {
+	color: white;
+	font-size: .75em;
+	text-decoration: underline;
+}
 .emaillink {
+	margin: 0 auto;
 	padding: .5em 2em;
 	background: #5F4085;
 	background: linear-gradient(180deg, rgba(2,74,201,1) 0%, rgb(95, 64, 133, 1) 100%);
 	color: white;
 	margin-top: .25em;
-	display: inline-block;
+	display: block;
 	font-weight: bold;
-	font-size: 2em;
-	box-shadow: 5px 10px #BC3641;
+	width: 100%;
 }
 .emaillink:hover {
 	background: linear-gradient(180deg, rgba(188,54,65,1) 0%, rgb(95, 64, 133, 1) 100%);
-	box-shadow: 5px 10px #024AC9;
 }
 .highlighted {
 	background: white;
@@ -242,5 +278,14 @@ div.cloud {
 	div.cloud {
 		display: inline-block;
 		width: 20%;
+	}
+	#my-form {
+		width: 75%;
+	}
+	.input_container.short {
+		width: 50%;
+	}
+	#my-form-status {
+		width: 75%;
 	}
 }
