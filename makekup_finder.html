@@ -1,4 +1,4 @@
-<!-- keeping all (HTML/JS/CSS) in one file for the ease of presenting as this is a code sample rather than a full project -->
+<!-- This is a simple non-production single page site created simply to demo some front end skills. I kept all (HTML/JS/CSS) in one file for the ease of presenting as this is a contained code sample. -->
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -305,8 +305,6 @@
 			});
 		}
 
-		
-		
 		//few minor visual changes once the cards are loaded.
 		function cardsAvailable(type) {
 			message.innerHTML = '<p>You selected <b>'+type+'</b>.</p>'
@@ -353,8 +351,9 @@
 		}
 
 		//moving eyes
+		let moving = true;
 		const sides = ["l", "r"];
-		let eyes = [];
+		const eyes = [];
 
 		//all of the calculations have to be done for both eyes. doing it outside the function because these remain static and don't need to be rerun every time the mouse is moves.
 		for (s of sides) {
@@ -374,7 +373,7 @@
 			eyes.push(eye);
 		}
 
-
+		//TODO: add option to stop the eye movement if you hate it.
 		document.addEventListener("mousemove", (e)=> {
 			//caluculate horizontal percentage of how far over the mouse is compared to the screensize
 			const hP = e.clientX / window.innerWidth;
