@@ -352,5 +352,47 @@
 			document.querySelector('#arrow').innerHTML = order ? "&darr;" : "&uarr;";
 		}
 
+		//moving eyes
+		const sides = ["l", "r"];
+		let eyes = [];
+
+		//all of the calculations have to be done for both eyes. doing it outside the function because these remain static and don't need to be rerun every time the mouse is moves.
+		for (s of sides) {
+			const eye = {};
+			eye["side"] = s;
+			const eyeball = document.querySelector('#'+s+'eyeball');
+			const eyeballBB = eyeball.getBBox();
+			eye["width"] = eyeballBB.width;
+			eye["pupil"] = document.querySelector('#'+s+'pupil');
+			eye["pupilX"] = eye["pupil"].getBBox().x;
+			const pWidth = eye["pupil"].getBBox().width;
+
+			//these numbers are a bit contrived by work out so visually the eyeballs don't escape too far onto the rest of the page
+			eye["lBorder"] = eyeballBB.x + (pWidth/2);
+			eye["rBorder"] = (eyeballBB.x + eye["width"]) - (pWidth/2);
+			
+			eyes.push(eye);
+		}
+		console.log(eyes);
+
+
+		document.addEventListener("mousemove", (e)=> {
+			//caluculate horizontal percentage of how far over the mous is compared to the screensize
+			const hP = e.clientX / window.innerWidth;
+
+			const direction = (hP >= .5) ? "r" : "l";
+			
+			for (eye of eyes) {
+				let location = eye["pupilX"] + (eye["width"]*hP);
+				if (eye["lBorder"] > location) {
+					location = eye["lBorder"];
+				} else if (eye["rBorder"] < location){
+					location = eye["rBorder"];
+				}
+				eye["pupil"].style.cx = location;
+			}
+
+		});
+
 	</script>
 </html>
