@@ -1,0 +1,356 @@
+<!-- keeping all (HTML/JS/CSS) in one file for the ease of presenting as this is a code sample rather than a full project -->
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Visual Makeup Finder</title>
+	</head>
+	
+	<style>
+		html {
+			background: #eee;
+		}
+
+		/* grid defaults to single column, media query later on changes the layout for larger screens */
+		body {
+			font-size: 16px;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			padding: 1em;
+			display: grid;
+			grid-gap: 1em;
+		  grid-template-areas:
+		  	"header"
+		  	"sidebar"
+				"content"
+		}
+
+		h1 small {
+			float: right;
+			font-size: .5em;
+		}
+
+		aside {
+		  grid-area: sidebar;
+		  background: #024AC9;
+		  border: .25em solid #fff;
+		}
+
+		header {
+			grid-area: header;
+		}
+
+		main {
+			grid-area: content;
+		}
+
+		svg {
+			width: 100%;
+		}
+
+		/* make it clear the image should be interactied with */
+		svg:hover {
+			cursor: pointer;
+		}
+
+		#cards {
+			display: flex; 
+		  flex-flow: row wrap;
+		  flex-wrap: wrap;
+		  justify-content: space-between;
+		}
+
+		.card {
+			width: 48%;
+			padding: .25em;
+			margin-bottom: .5em;
+			border-left: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			background: #fff;
+		}
+
+		.card p {
+			margin-top: 0;
+		}
+		.swatch {
+			display: inline-block;
+			width: 1em;
+			height: 1em;
+		}
+		.brand {
+			text-transform: uppercase;
+		}
+
+		button {
+		  background-color: #5F4085;
+		  padding: .5em;
+		  color: white;
+		  margin-bottom: .5em;
+		}
+		button:hover {background-color: #3e8e41}
+
+		/* auto generated from illustrator for the svg */
+		.st0{fill:#F0C9B0;}
+		.st1{fill:#E3BEA8;}
+		.st2{fill:#D8B6A1;}
+		.st3{display:none;fill:#E7C1AA;}
+		.st4{fill:#E0BCA6;}
+		.st5{fill:#D6B39E;}
+		.st6{fill:#F8CDB1;}
+		.st7{fill:#BC3641;stroke:#853641;stroke-width:8;stroke-miterlimit:10;}
+		.st8{fill:#AA2F3A;}
+		.st9{fill:#FFFFFF;stroke:#92262F;stroke-miterlimit:10;}
+		.st10{fill:none;stroke:#8D242D;stroke-width:2;stroke-miterlimit:10;}
+		.st11{fill:#FFD6BD;}
+		.st12{fill:#DDB495;}
+		.st13{fill:#FFFFFF;}
+		.st14{fill:#301C0E;stroke:#640E06;stroke-miterlimit:10;}
+		.st15{fill:#FFFDE9;}
+		.st16{fill:#EEC7AE;}
+		.st17{fill:#EBC5AC;}
+		.st18{fill:#785843;}
+		.st19{fill:#EAC5AD;}
+		.st20{fill:#EAC4AB;}
+		.st21{fill:#E3BFA8;}
+		.st22{fill:#F2C4AE;}
+		.st23{fill:#D5AE90;}
+		.st24{fill:#170100;}
+		.st25{fill:#E3A989;}
+		.st26{fill:#6A3F00;}
+
+		@media only screen and (min-width: 800px)  {
+		  body {
+		    grid-template-columns: 33% auto;
+		    grid-template-areas:
+		    "header header"
+		    "sidebar  content"
+		  }
+		  .card {
+				width: 23%;
+			}
+		}
+
+	</style>
+	<body>
+		<header>
+			<h1>Visual Makeup Finder</h1>
+			<h2>Click on the portrait to see makeup products for that areas of the face.</h2>
+		</header>
+		
+		<aside id="finder">
+			<!-- inline the SVG to make it easier to demon !-->
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2320 2740.6" style="enable-background:new 0 0 2320 2740.6;" xml:space="preserve">
+				<g id="neck">
+					<path class="st0" d="M604,1685.7c0,0,167.8,16.6,203.8-25.3c36-41.9,47.5-92.2,47.5-92.2l696.6-62.5c0,0,15,198.9,72,212.9
+						c57,14,160.1,29.3,160.1,29.3l157.9,188.7l-309,633.1l-1011.1-66l-198-585.1L604,1685.7z"/>
+					<path class="st1" d="M1357,1695.7l50.8-49.4l109.2-86.6l37.1-31.5c0,0,21,153,41.1,167.5c20.1,14.5,50.9,29.6,114.8,40.1
+						s74,12,74,12l76,128.9l-410,513l-19.5-64.9C1430.5,2324.8,1347.1,1714.7,1357,1695.7z"/>
+					<path class="st2" d="M1363.3,1668.3l3.9,160.4c0,0-94.2-19.4-127.2-28.4c-33-9-192-31.5-204-36s-67.5,96-67.5,96
+						s-40.5-190.5-78.7-258c-38.3-67.5,88.4-33,88.4-33L1363.3,1668.3z"/>
+					<polygon class="st3" points="604,1685.7 909.7,1646.7 986.7,1828.9 796.6,2401.4 516,2599.7 	"/>
+					<path class="st4" d="M803.6,1659.4c0,0,46.8-35.7,47.5-92.2s94.7-8.5,94.7-8.5l-16,116L803.6,1659.4z"/>
+					<path class="st5" d="M760.1,2400.2l40.4-10.5c0,0,138.2,135,186.2,130.5c47.9-4.5,271.4-12,323.9-58.5
+						c52.5-46.5,132.6-112.6,132.6-112.6l78.9,32.5l-325.5,338l-466.5-202.5L760.1,2400.2z"/>
+				</g>
+				<g id="face_1_">
+					<path onclick="getMakeup('foundation')" id="foundation" class="st6" d="M680,647.7c0,0,8-286,58-360s90-146,136-160s86-36,156-24s130,30,130,30s48-8,110-22
+						s106-22,178,22s120,72,144,156s50,134,54,190s22,134,26,196s4,116,10,166s26,196,12,272s-2,129.1-44,238.5s-100,197.5-152,227.5
+						s-104,92-104,92s-108,80-196,76s-176-24-226-72s-124-100-164-170s-88-194-98-282s-48-200-44-284S679.5,661.9,680,647.7z"/>
+					<g id="lipstick" onclick="getMakeup('lipstick')">
+						<path class="st7" d="M936,1358.5c0,0,18.3,20.2,44.1,23.2c25.8,3,49.5,5.1,76.4,6.1c26.9,1,61.3-2,83.9,6.1
+							c22.6,8.1,44.1,8.1,44.1,8.1s26.9-11.1,56-11.1c29.1,0,123.8,0,123.8,0s53.8-18.2,65.7-25.3c-16.1,14.6-19.4,9.1-24.8,22.2
+							c-5.4,13.1-60.3,102-120.5,118.2c-60.3,16.2-121.6,36.4-184,10.1c-62.4-26.3-106.5-78.8-134.5-113.2
+							C938.2,1368.6,936,1358.5,936,1358.5z"/>
+						<path class="st8" d="M1011.4,1424.7c0,0,115.1,62.6,150.6,56.5c35.5-6.1,60.2-15.1,74.2-22.2s6.5,1,31.2,0
+							c24.7-1,35.5,17.2,63.5,1s35.5-48.5,35.5-48.5h-137.7l-66.7,14.1l-65.6-9.1l-98.9-5L1011.4,1424.7z"/>
+						<line class="st9" x1="1051.2" y1="1424.7" x2="1160.9" y2="1446.9"/>
+						<line class="st10" x1="1269.5" y1="1430.8" x2="1160.9" y2="1446.9"/>
+					</g>
+					
+						<ellipse id="highlight_x5F_left" transform="matrix(0.3524 -0.9359 0.9359 0.3524 -415.9566 1431.0244)" class="st11" cx="826" cy="1016.1" rx="75" ry="216.3"/>
+					
+						<ellipse id="highlight_x5F_right" transform="matrix(0.9359 -0.3524 0.3524 0.9359 -243.4384 621.0506)" class="st11" cx="1584.1" cy="979.2" rx="216.3" ry="75"/>
+					<path class="st12" d="M1333,851.7v-10c0,0-6-10,17-27s51-44,90-51s102-10,126,16s18,51,16,62s-30,48-59,55c-29,7-140-11-162-14
+						s-45-5-45-5S1322,858.7,1333,851.7z"/>
+					<path class="st12" d="M773,835.7c0,0,36-44,64-48s63-13,86-8s86,24,108,44s29,54,29,54s1,9-37,7c-30,13.6-116,44-149,26
+						s-98-39-101-69"/>
+					<g id="leye">
+						<path id="leyeball" class="st13" d="M826,842c0,0,10-20.3,36-28.3s61-17.9,91.5-6.9c30.5,10.9,80.5,34.9,73.5,44.9s-18,30-18,30
+							s-61.3,20-82.2,18.5c-20.8-1.5-56.8,4.5-69.8-9.5S826,842,826,842z"/>
+						<circle id="lpupil" class="st14" cx="934" cy="851.7" r="49"/>
+					</g>
+					<path id="reyeball" class="st15" d="M1352,851.7c0,0,5-22,33-36s42-25,79-23s73,9,72,17s-5,58-5,58s-48,29-87,23c-39-6-77-17-77-17
+						L1352,851.7z"/>
+					<circle id="rpupil" class="st14" cx="1460" cy="841.7" r="49"/>
+					<g id="right_shadows">
+						<path class="st16" d="M1656.1,909.7l29.8-23.8c0,0,29.4,188.7,1,305.7c-10.2,69.3-27.2,139.4-38.4,157.6
+							c-35.1-23.9-50.4-75.2-50.4-75.2S1667,1002.7,1656.1,909.7z"/>
+						<path class="st17" d="M1598,1274c0,0-70.2,179.3-106.2,220.3s-61.5,50-73.5,78.5c-12,28.5-37.5,55.5-52.5,66
+							c-15,10.5,42,7.5,42,7.5s169.5-98,198-196.7c32.4-68.2,46.9-104.5,46.9-104.5L1598,1274z"/>
+					</g>
+					<g id="eyebrows" onclick="getMakeup('eyebrow')">
+						<path id="right_brow" class="st18" d="M1340,724.7l-19-43l19,9v-28l18,18l14-38l26-5l33-21l19.1-13h9.9l23-15h26l44-5h24
+							c0,0,14,3,36,19s46,48,52,74s6,26,6,26s-49.7-64-86.9-70c-37.1,7-102.1,27-124.1,50s-32,33-32,33l-38.9,9l-18.1,10L1340,724.7z"/>
+						<path id="left_brow" class="st18" d="M1042.4,758.8l17.6-41.1l-8.8-30l-8.8,10l-24.4-38.5l-31.3,10.5L966,659.2h-18h-14l-49-13.5
+							c0,0-45-16-75-10s-74,38.9-82,60.9s-14,49.1-14,49.1s40-32.2,76-49.1s46-18,72,0s51,16.5,51,16.5s15,14.7,53,21.7
+							S1042.4,758.8,1042.4,758.8z"/>
+					</g>
+					<g id="nose">
+						<path class="st19" d="M1286,802.7c0,0,24,67,0,88s-38.6,29-17.3,91s71.3,142,71.3,174c-8-31.6-40.8-28-40.8-28H1238v-237
+							C1238,890.7,1242,825.7,1286,802.7z"/>
+						<polygon class="st18" points="1224.1,1252.7 1213.8,1266.7 1270,1266.7 1304,1238.7 1253,1224.7 		"/>
+						<polygon class="st18" points="1060,1245.7 1099.2,1266.7 1106.7,1245.7 1070.7,1231.8 		"/>
+						<path class="st20" d="M1042.4,1144.8c0,0-20.2,29.2-14.7,50.6c5.4,21.4,32.3,50.3,32.3,50.3s40.9-2.6,39.2,21
+							c26.8-30.4,26.8-30.4,26.8-30.4L1042.4,1144.8z"/>
+						<path class="st16" d="M1238,1127.7v87c0,0-27,17-24,24s6,20,17,11s26-20,47-15s6,5,0,12s-8,20-8,20s45-21,51-28s23-54,19-83
+							c-3.9-19.9-7.3-28-24-28C1292.5,1127.7,1244,1119.7,1238,1127.7z"/>
+						<path class="st20" d="M1049.6,828.5l10.4-25.9c0,0,33.1,5.9,46.6,39c13.5,33.1,19.5,99.1,19.5,99.1v130.5c0,0-23.7,43.5-26.8,70.5
+							s7.3,71.3,17.8,82.9c-29.2,7.1-29.2,7.1-29.2,7.1s-46.6-69-45.4-87S1153.1,966.8,1049.6,828.5z"/>
+					</g>
+					<path id="left_shadow" class="st21" d="M690.2,495.7l36.5,182L696,778.2c0,0-12,96.6-8,138c4,41.5,37.5,133.5,38.7,157.5
+						c1.3,24-14.3,119.9,3.5,151c17.8,31.1,29.8,39,42.8,87s-4.1,113.7-4.1,113.7L717,1277.9c0,0-6.6-75.8-36.3-207.4
+						c-26.8-118.8-12.7-172.2-9.4-242C681,621.8,690.2,495.7,690.2,495.7z"/>
+					<g id="blush" onclick="getMakeup('blush')">
+						<path id="right_cheek" class="st22" d="M1656,900.7c0,0-6,49-62,77s-218,64-204,138s88,174,88,174s14,38,70,32s106-112,108-170
+							S1656,900.7,1656,900.7z"/>
+						<path id="left_cheek" class="st22" d="M861.8,1066.5c0,0,39-59.4,96-49.2c57,10.2,68.9,61.2,68.9,61.2s-38.5,154.4-92.7,188.2
+							c-54.2,33.8-210.2,39.7-207.2-71.3C729.8,1084.5,813.8,1045.5,861.8,1066.5z"/>
+					</g>
+					<path id="chin_crease" class="st23" d="M1083.3,1559.7c0,0,186.7,24,205.7,8C1268.7,1587.7,1148.7,1617.7,1083.3,1559.7z"/>
+					<path id="dimple" class="st23" d="M900.7,1334.3c0,0-18,69,12,65.8C902.8,1375,905.7,1375.7,900.7,1334.3z"/>
+					<path class="st16" d="M914.2,1624.1l37.9-21.9l24,34.5c0,0,50.3,15,50.6,0c15.6,34.5,15.7,81.8,15.7,81.8
+						S938.8,1682.6,914.2,1624.1z"/>
+					<g id="mascara" onclick="getMakeup('mascara')">
+						<path class="st24" d="M1009.6,832.6c0,0,12.4-14.9,12.4-22.9"/>
+						<path class="st24" d="M1003,832.6l-9-8.5c0,0,12.5-15,13.5-28.5"/>
+						<path class="st24" d="M987.9,821.1l19.6-30.5l-24.5,19c0,0-7.5-6.5-3.5-30c-6.5,6-13,16-13,16l-13-16c0,0-7-24-9.5-28.5
+							c0,17,0,32.5,0,32.5l-17.2,2.5c0,0-24.8-29.5-26.3-35c15.5,28.5,29.5,34.5,21,35c-8.5,0.5-21-11.5-21-11.5S890,762.4,887,758.8
+							s17.5,24.4,9.5,23.4s-11.5-5-11.5-5l-8.5,2.5l-9.5-1.5l-2.5,3l-9.5-3l-6,4.5l-17.5-14.5l10,20l-15.5-6.5l17,14l-42-14.5l36.5,21.5
+							L801,792.2l28,17.5l-11,4.5l-43-12.3l35.5,16.3l-26.5-0.5l18,8h-37.5l11,15.5l28.5,10.5l22-12.5l68.5-29.5l43.5-8.3l52,19.7H987.9
+							z"/>
+						<path class="st24" d="M1385,815.7c0,0,16-31,14-41s0.2,28,0.2,28l8.8-43.9c0,0,8,40.2,10,0c8,28.4,10.3,37.1,10.3,37.1
+							s34.7-39.2,31.7-46.2s-7,25-7,25l36-35c0,0-46,45-39,44s39-31,39-31l7-7c0,0-29,31-36,42c-3.4,5.4,8.2-6,21-19
+							c13.4-13.6,28-29,28-29l-31,44l31-38l-19,38c0,0,17-16,26-32s-9,30-15,34s34.3-22.3,38.3-30.7c-3.3,9.3-30.3,32.3-30.3,32.3
+							s32.3-3,50-32.3c-2.7,10-34,33.7-31.7,35.3c2.3,1.7,30.3,0.7,48.3-26c-1.7,6-18,25.2-27.3,28.1c10,0,31.3-14.8,31.3-14.8
+							s-16,16-24,19.3c17-4.6,30.3-12.3,44-26c-22.3,24.7-26.3,25-22.3,24.7c4-0.3,19.3-10.3,19.3-10.3l-18.3,15c0,0,15-3.8,19.7-7.9
+							c0,4.2-14.3,11.9-19.7,14.2c-5.3,2.3,3.7,5.7,29-3.3c-4.3,8-3.7,8.3-12.3,12.3c6.7,0,19.7-5.7,29.7-15
+							c-2.7,6.3-26.3,25.7-32.7,27.7s-4.3,6.7-4.3,6.7s10.7,4.3,27.3-4.3c-3.3,7-18.7,12.6-28.3,11.3c-9.7-1.3-29.3-16.3-63.6-26.6
+							s-68.7-28.3-103.4-14C1385,815.7,1385,815.7,1385,815.7z"/>
+					</g>
+					<g id="bronzer" onclick="getMakeup('bronzer')">
+						<path id="left_shadow_1_" class="st25" d="M1177.8-7l-71.1,135.1l-151.2,40.1c0,0-100.4,24.6-127.5,58.3
+							c-27.1,33.7-44.4,170.4-62,187.3c-17.5,16.8-123.5,32.2-118.1,94.7c5.4,62.5,19.9,97.3,3.1,157.4s-100.7,54.3-100.7,54.3
+							l30.9-214.7c0,0,50.8-59.8,107.3-209.4c51.1-135.1,119.5-129.9,182.6-161.4C1058,41.5,1177.8-7,1177.8-7z"/>
+						<path id="left_shadow_2_" class="st25" d="M1222.4,109.7l0.2,0.4c6,11.4,16.6,19.8,29,23.1l131.6,34.9c0,0,100.4,24.6,127.5,58.3
+							c27.1,33.7,142.8,391,160.3,407.8s25.2-188.4,19.8-125.9s-19.9,97.3-3.1,157.4c0.2,0.6,0.4,1.2,0.5,1.9
+							c16.7,54,97.7,35.1,89.6-20.8l-18.6-129.5c-1.1-7.4-3.9-14.5-8.4-20.6c-15.6-21.3-56.4-83.5-100.7-200.8
+							c-51.1-135.1-119.5-129.9-182.6-161.4c-73-36.4-135.8-66-185.2-88.5C1242.3,27.8,1201.8,70.7,1222.4,109.7z"/>
+					</g>
+				</g>
+				<g id="hair">
+					<path class="st26" d="M1160,133.7c0,0-119.4-11.7-159.2-20c-63.4-13.2-185.8,63-212.8,102s-64.2,160.7-76.2,217.7
+						c-12,57-27,324-36,360c-9,36-6,99,0,171c6,72,18,138,33,228c15,90,61.2,238.3,96,313.2c27.2,34,144,157.8,156,274.8
+						c12,117,39,168,42,255c3,87-33,171-57,189c-24,18,12-15,24-78c-33,45-65.7,27-74.8,57c-9.2,30,11.8,150-72.2,192s-201,108-201,108
+						s-90,30-129-21s-66-96-78-144c-12-48,27-153,0-144c-27,9-87,9-105,24s-168,135-249-21c51,39,48,51,90,51s84,9,162-72
+						c78-81,84-114,84-114s-60,9-78,24s-48,57-78,75c-30,18-3-9,30-54c33-45,87-81,87-81l-27-18c0,0-105,84-189,114
+						c-84,30-102,33-102,33s90-69,150-99c60-30,6,6-45-12s129-81,129-81l66-66l33-57c0,0,45-12,24-51c-21-39-93-186-93-252
+						s42-174,42-204c0-30-39-120-21-189c18-69,63-141,63-141s-30-9-12-114s120-261,117-318c-3-57-33-189,18-297s81-168,150-210
+						s144-60,144-60s36-28.3,99-42.7s126-65.3,282-68.3c156-3,387-3,441,55.5c54,58.5,123,154.5,177,217.5c54,63,105,138,138,237
+						s51,225,78,282c27,57,132,273,150,345s-96-237-141-264c15,57,27,93,27,132s-3,75.7,21,142.9c24,67.2,42,97.2,36,175.2
+						c-6,78-18,117-3,162c15,45,102,108,120,159c18,51,24,84,45,114c21,30,93,60,93,60l-18,339c0,0-69-36-117-45s-207-21-177,6
+						c30,27,33,30,33,66c0,36,63,69,63,69s51,39,72,12c21-27,24-126,36-108c12,18-24,201-45,210c-21,9-51,48-69,0c-18-48-36-117-63-135
+						c39,114,102,171,87,204c-15,33-51,84-48,102c3,18,6,84,39,18c-15,51-87,48.4-120,28.7c-33-19.7-21,31.3-21,31.3s84,48,54,78
+						c-30,30-114,3-123-30c-9-33-102-81-102-81s57,126,66,108c9-18,48,26,12,16c-36-10-102-112-102-145c0-33-21,63-96,75
+						c-75,12-111-6-96,39c15,45,33,63,33,63s45,87,141,108c-69,0-207-75-279-147c-72-72-153-135-150-213c3-78-27-93,30-255
+						c0,0,21-63,18-102c-3-39-81-189-45-264c36-75,138-186,174-225c36-39,129-282,129-351c0-69-21-207-21-267c0-60-3-336-15-396
+						c-12-60-30-102-45-174c-15-72-65.8-177.7-158.9-204.7c-93-27-179.3-15.5-240.2-8"/>
+				</g>
+			</svg>
+		</aside>
+		
+		<main>
+			<div id="messages">
+				<!-- empty p is a bit hacky, but keeps things from jumping too much when the message content is added !-->
+				<p></p>
+			</div>
+			<button id="sort_button" onclick="sortCards()" style="display:none">Sort Cards By Price <span id="arrow">&uarr;</span></button>
+			<div id="cards">
+			</div>
+		</main>
+	</body>
+	<script>
+		const cardContainer = document.querySelector('#cards');
+		const message = document.querySelector('#messages');
+		const sortButton = document.querySelector('#sort_button');
+		let order = false;
+
+		function getMakeup(type) {
+			//since the API is slow, give an indication that something is happening
+			message.innerHTML = '<p>You selected <b>'+type+'</b>! Currently fetching your options from <a href="http://makeup-api.herokuapp.com/">the Makeup API</a>.</p>'
+			
+			//scroll up as on mobile/tablet it isn't clear anything it happening
+			message.scrollIntoView()
+			
+			//connect to the Makup API and either create the cards and insert them or display an error something goes wrong. TODO: add caching as this API is very slow.
+			let base_uri = "http://makeup-api.herokuapp.com/api/v1/products.json?product_type="+type;
+
+			fetch(base_uri)
+			.then(response => response.json())
+			.then(data => {
+			  createCards(data);
+			  cardsAvailable(type);
+			})
+			.catch(err => {
+				console.error(err);
+				message.innerHTML = '<p>Uh oh spaghetti o. Something went wrong in the process!</p>';
+			});
+		}
+
+		
+		
+		//few minor visual changes once the cards are loaded.
+		function cardsAvailable(type) {
+			message.innerHTML = '<p>You selected <b>'+type+'</b>.</p>'
+			sort_button.style.display = "inline-block";
+		}
+		
+		//create the cards and add them to the container.
+		function createCards(products) {
+			//clear the container in case there are existing cards.
+			cardContainer.innerHTML = ""
+			let items = "";
+	    for (let p of products) {
+	    	//mapping colors and price here here for clarity. for the sorting sake, added the ternary to the price missing prices are replace with 0.00
+	    	const colors = p["product_colors"].map(c => `<div class='swatch' style='background:`+c["hex_value"]+`'></div>`).join(' ');
+	    	const price = !p["price"] ? "0.00" : p["price"]
+	    	
+	    	//card via a template. note the price is included twice, once as a data attribute for sorting
+	    	const card =
+		    `<div class="card" data-price='${price}'>
+		      <p><span class="brand">${p["brand"]}</span> <b>${p["name"]}</b> $${price}</p>
+		      <div class="swatchContainer">${colors}</div>
+		    </div>`
+	      items += card;
+	    }
+	    cardContainer.innerHTML = items
+		}
+
+		//sort products by price asc or desc.
+		function sortCards() {
+			//toggle the order so the 2nd time it is clicked it will switch the order and the direction on the arrow on the button. Because this was set as false initially, this line will switch it true the first time.
+			order = !order;
+			
+			//because the cards were added dynamically, have to look in the parent for the cards rather than through the document
+			const allCards = cardContainer.querySelectorAll('[data-price');
+			
+			const categoryItemsArray = Array.from(allCards);
+
+			//depending on the order being true sort the array by the price parsed as a float to get around the 10 coming before 9 issue that can occur when sorting numbers in string format.
+			let sorted = order ? categoryItemsArray.sort((a, b) => parseFloat(a.dataset.price) - parseFloat(b.dataset.price)) : categoryItemsArray.sort((a, b) => parseFloat(b.dataset.price) - parseFloat(a.dataset.price));
+
+			sorted.forEach(c => cardContainer.appendChild(c));
+
+			document.querySelector('#arrow').innerHTML = order ? "&darr;" : "&uarr;";
+		}
+
+	</script>
+</html>

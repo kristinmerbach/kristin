@@ -74,14 +74,9 @@ document.addEventListener("mousemove", (e)=> {
 
 //form
 window.addEventListener("DOMContentLoaded", function() {
-
-  // get the form elements defined in your form HTML above
-  
-  var form = document.getElementById("my-form");
-  var button = document.getElementById("my-form-button");
-  var status = document.getElementById("my-form-status");
-
-  // Success and Error functions for after the form is submitted
+  const form = document.getElementById("my-form");
+  const button = document.getElementById("my-form-button");
+  const status = document.getElementById("my-form-status");
   
   function success() {
     form.reset();
@@ -94,7 +89,6 @@ window.addEventListener("DOMContentLoaded", function() {
   }
 
   // handle the form submission event
-
   form.addEventListener("submit", function(ev) {
     ev.preventDefault();
     var data = new FormData(form);
@@ -104,16 +98,15 @@ window.addEventListener("DOMContentLoaded", function() {
 
 //form re-reveal
 function revealForm() {
-  var form = document.getElementById("my-form");
-  var status = document.getElementById("my-form-status");
-    status.style = "display: none ";
-    form.style = "display: block;"
-  }
+  const form = document.getElementById("my-form");
+  const status = document.getElementById("my-form-status");
+  status.style = "display: none";
+  form.style = "display: block;"
+}
 
 // helper function for sending an AJAX request
-
 function ajax(method, url, data, success, error) {
-  var xhr = new XMLHttpRequest();
+  const xhr = new XMLHttpRequest();
   xhr.open(method, url);
   xhr.setRequestHeader("Accept", "application/json");
   xhr.onreadystatechange = function() {
