@@ -291,7 +291,7 @@
 			message.scrollIntoView()
 			
 			//connect to the Makup API and either create the cards and insert them or display an error something goes wrong. TODO: add caching as this API is very slow.
-			let base_uri = "http://makeup-api.herokuapp.com/api/v1/products.json?product_type="+type;
+			let base_uri = "https://makeup-api.herokuapp.com/api/v1/products.json?product_type="+type;
 
 			fetch(base_uri)
 			.then(response => response.json())
