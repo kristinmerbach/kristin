@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8' />
+    <title>Design Pickle Code Challenge</title>
+  </head>
+  <body class='container'>
+  	<aside>
+  		<h2>Filter Issues by Label</h2>
+  		<ul>
+  			<li><a href="/labels/actioncable">ActionCable</a></li>
+				<li><a href="/labels/actionmailer">ActionMailer</a></li>
+				<li><a href="/labels/actionpack">ActionPack</a></li>
+				<li><a href="/labels/actionview">ActionView</a></li>
+				<li><a href="/labels/activejob">ActiveJob</a></li>
+				<li><a href="/labels/activemodel">ActiveModel</a></li>
+				<li><a href="/labels/activerecord">ActiveRecord</a></li>
+				<li><a href="/labels/activestorage">ActiveStorage</a></li>
+				<li><a href="/labels/activesupport">ActiveSupport</a></li>
+				<li><a href="/labels/asset%20pipeline">Asset Pipeline</a></li>
+			</ul>
+  	</aside>
+  	<main>
+  	<h1>Current Open Issues</h1>
+  	<% @issues.each do |issue| %>
+			<li><%= issue %></li>
+  	<% end %>
+  	<% if @issues.length == 50 %>
+  		<a href="/pages/<%= @page.to_s %>">Next page</a>
+  	<% end %>
+  	</main>
+  </body>
+</html>
