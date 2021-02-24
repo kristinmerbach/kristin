@@ -373,22 +373,24 @@
 			
 			eyes.push(eye);
 		}
-		console.log(eyes);
 
 
 		document.addEventListener("mousemove", (e)=> {
-			//caluculate horizontal percentage of how far over the mous is compared to the screensize
+			//caluculate horizontal percentage of how far over the mouse is compared to the screensize
 			const hP = e.clientX / window.innerWidth;
-
-			const direction = (hP >= .5) ? "r" : "l";
 			
 			for (eye of eyes) {
+				//calculate the percentage of the eyeball to keep consistent with where the mouse is on the screen
 				let location = eye["pupilX"] + (eye["width"]*hP);
+
+				//make sure the pupil doesn't pop out of the eyeball.
 				if (eye["lBorder"] > location) {
 					location = eye["lBorder"];
 				} else if (eye["rBorder"] < location){
 					location = eye["rBorder"];
 				}
+
+				//move the eyeball
 				eye["pupil"].style.cx = location;
 			}
 
